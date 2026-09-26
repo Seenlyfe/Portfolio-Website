@@ -127,6 +127,7 @@ nav.scrolled .logo {
   margin: auto; 
   padding: 290px 20px;
   text-align: center;
+  position: relative;   
 }
 
 .ABOUT h1 {
@@ -159,7 +160,7 @@ nav.scrolled .logo {
   width: 680px;
   height: auto;
   position: absolute;
-  top: 290px;
+  top: 100px;
   right: 200px;
 }
 
