@@ -16,12 +16,12 @@
 }
 
 .header {
-    padding-top: 60px; 
+    padding-top: 48px; 
 }
 
 nav {
    display: flex; 
-   padding: 12px 6%;
+   padding: 10px 6%;
    justify-content: space-between;
    align-items: center;
    position: fixed;
@@ -35,18 +35,18 @@ nav {
 
 nav.scrolled {
    background-color: #131313;
-   padding: 6px 6%; 
+   padding: 5px 6%; 
 }
 
 nav .logo{
-    width: 305px; 
+    width: 244px; 
     height: auto;
     display: block;
     transition: width 0.3s ease;
 }
 
 nav.scrolled .logo {
-    width: 180px; 
+    width: 144px; 
 }
 
 .nav-links{
@@ -57,14 +57,14 @@ nav.scrolled .logo {
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    padding: 0px 12px;
+    padding: 0px 10px;
     position: relative;
 }
 
 .nav-links ul li a{
     color: #d6d1ce;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 19px;
     font-family: "Fraunces" 
 }
 
@@ -94,12 +94,12 @@ nav.scrolled .logo {
 }
 
 .opening-line h2{
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 300;
 }
 
 .opening-line h1{
-    font-size: 120px;
+    font-size: 96px;
     font-weight: 400;
 }
 
@@ -113,9 +113,9 @@ nav.scrolled .logo {
   position: absolute;
   left: 0;
   top: 100%; 
-  margin-top: -13px; 
+  margin-top: -10px; 
   width: 100%;
-  height: 3px; 
+  height: 2px; 
   background-color: #d6d1ce; 
   border-radius: 2px; 
 }
@@ -125,7 +125,7 @@ nav.scrolled .logo {
   min-height: 90vh;
   width: 100%;
   margin: auto; 
-  padding: 290px 20px;
+  padding: 232px 16px;
   text-align: center;
   position: relative;   
 }
@@ -133,35 +133,35 @@ nav.scrolled .logo {
 .ABOUT h1 {
   font-family: "Fraunces";
   color: #d6d1ce;
-  font-size: 5rem;        
+  font-size: 4rem;        
   line-height: 1.2;
-  margin-bottom: 40px;  
-  margin-right: 890px;  
+  margin-bottom: 32px;  
+  margin-right: 712px;  
 }
 
 .ABOUT p {
   font-family: "Fraunces";
   color: #d6d1ce;
-  font-size: 25px;   
+  font-size: 20px;   
   line-height: 1.6;
   margin-top: 0;
-  margin-bottom: 30px;
-  margin-right: 890px;    
+  margin-bottom: 24px;
+  margin-right: 712px;    
 }
 
 .second-paragraph {
-  max-width: 600px;       
-  margin-left: 410px;   
+  max-width: 480px;       
+  margin-left: 328px;   
   margin-right: auto;
   text-align: center;
 }
 
 .henjie {
-  width: 680px;
+  width: 544px;
   height: auto;
   position: absolute;
-  top: 100px;
-  right: 200px;
+  top: 80px;
+  right: 160px;
 }
 
 .PORTFOLIO {
@@ -171,22 +171,22 @@ nav.scrolled .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
-  padding: 80px 20px;
+  gap: 48px;
+  padding: 64px 16px;
 }
 
 .PORTFOLIO h1 {
   color: #d6d1ce;
   font-family: "Fraunces";
   white-space: nowrap;
-  font-size: 70px;
+  font-size: 56px;
   margin: 0;
 }
 
 .photo-row {
   display: flex;
   align-items: flex-end;
-  gap: 60px;
+  gap: 48px;
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -216,21 +216,21 @@ nav.scrolled .logo {
 }
 
 .SOFT-MOMENTS {
-  width: 650px;
+  width: 520px;
 }
 
 .PORTRAITS,
 .LIVE-EVENTS {
-  width: 500px;
-  height: 700px;
+  width: 400px;
+  height: 560px;
   object-fit: cover;
   object-position: right bottom;
 }
 
 .SPORTS,
 .TRAVEL {
-  width: 500px;
-  height: 700px;
+  width: 400px;
+  height: 560px;
   object-fit: cover;
   object-position: right bottom;
 }
@@ -251,17 +251,17 @@ nav.scrolled .logo {
   font-family: "Fraunces";
   color: #d6d1ce;
   white-space: nowrap;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .left{
-  transform: translateY(-70px);
-  margin-top: 85px;
+  transform: translateY(-56px);
+  margin-top: 68px;
 }
 
 .right{
-  transform: translateY(-70px); 
-  margin-top: 85px;
+  transform: translateY(-56px); 
+  margin-top: 68px;
 }
 
 
@@ -271,11 +271,11 @@ nav.scrolled .logo {
     display: inline-block;
     text-decoration: none;
     border: 1px solid;
-    padding: 30px 40px;
-    font-size: 25px;
+    padding: 24px 32px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .button:hover{
@@ -305,7 +305,7 @@ nav.scrolled .logo {
     transform: translate(-50%,-50%);
     text-align: center;
     font-family: "Fraunces";
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .button2 {
@@ -318,8 +318,8 @@ nav.scrolled .logo {
     display: inline-block;
     text-decoration: none;
     border: 1px solid;
-    padding: 30px 40px;
-    font-size: 25px;
+    padding: 24px 32px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
 }
@@ -335,7 +335,7 @@ nav.scrolled .logo {
     min-height: 15vh;
     width: 100%;
     background-color: #131313;
-    padding: 20px 6%;
+    padding: 16px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -347,7 +347,7 @@ nav.scrolled .logo {
 }
 
 .bottom-logo {
-    width: 370px;
+    width: 296px;
     height: auto;
     display: block;
 }
@@ -355,14 +355,14 @@ nav.scrolled .logo {
 .copyright {
     color: #d6d1ce;
     font-family: "Fraunces";
-    transform: translateY(-150px);
-    margin-left: 15px; 
+    transform: translateY(-120px);
+    margin-left: 12px; 
 }
 
 .contact-links {
     display: flex;
     justify-content: flex-end;
-    gap: 40px;
+    gap: 32px;
     color: #d6d1ce;
     font-family: "Fraunces";
 }
@@ -381,12 +381,12 @@ nav.scrolled .logo {
 .email,
 .number {
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .divider {
     width: 1px;
-    height: 50px;
+    height: 40px;
     background-color: #d6d1ce;
     align-self: center;
 }
@@ -394,7 +394,7 @@ nav.scrolled .logo {
 .depth-carousel {
   position: relative;
   width: 100%;
-  height: 950px;
+  height: 760px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,8 +420,8 @@ nav.scrolled .logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
-  height: 700px;
+  width: 400px;
+  height: 560px;
   overflow: hidden;
   will-change: transform, opacity, filter;
   cursor: pointer;
@@ -446,7 +446,7 @@ nav.scrolled .logo {
   color: #d6d1ce;
   white-space: nowrap;
   text-align: center;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 html {
