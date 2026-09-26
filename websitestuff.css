@@ -2,7 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-}     
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 
 .header {
     min-height: 100vh;
@@ -13,15 +23,12 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
-}
-
-.header {
-    padding-top: 60px; 
+    padding-top: 60px;
 }
 
 nav {
    display: flex; 
-   padding: 12px 6%;
+   padding: 12px 5%;
    justify-content: space-between;
    align-items: center;
    position: fixed;
@@ -35,37 +42,44 @@ nav {
 
 nav.scrolled {
    background-color: #131313;
-   padding: 6px 6%; 
+   padding: 6px 5%; 
 }
 
 nav .logo{
-    width: 305px; 
+    width: clamp(140px, 20vw, 305px); 
     height: auto;
     display: block;
     transition: width 0.3s ease;
 }
 
 nav.scrolled .logo {
-    width: 180px; 
+    width: clamp(100px, 14vw, 180px); 
 }
 
 .nav-links{
     flex: 1;
     text-align: right;
+    min-width: 0;
+}
+
+.nav-links ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 4px 12px;
 }
 
 .nav-links ul li{
     list-style: none;
-    display: inline-block;
-    padding: 0px 12px;
     position: relative;
 }
 
 .nav-links ul li a{
     color: #d6d1ce;
     text-decoration: none;
-    font-size: 24px;
-    font-family: "Fraunces" 
+    font-size: clamp(14px, 1.6vw, 24px);
+    font-family: "Fraunces";
+    white-space: nowrap;
 }
 
 .nav-links ul li a::after{
@@ -84,6 +98,7 @@ nav.scrolled .logo {
 
 .opening-line{
     width: 90%;
+    max-width: 1100px;
     color: #d6d1ce;
     position: absolute;
     top: 50%;
@@ -91,16 +106,18 @@ nav.scrolled .logo {
     transform: translate(-50%,-50%);
     text-align: center;
     font-family: "Fraunces";
+    padding: 0 16px;
 }
 
 .opening-line h2{
-    font-size: 40px;
+    font-size: clamp(20px, 4vw, 40px);
     font-weight: 300;
 }
 
 .opening-line h1{
-    font-size: 120px;
+    font-size: clamp(40px, 10vw, 120px);
     font-weight: 400;
+    line-height: 1.1;
 }
 
 .custom-underline {
@@ -113,56 +130,64 @@ nav.scrolled .logo {
   position: absolute;
   left: 0;
   top: 100%; 
-  margin-top: -13px; 
+  margin-top: -2%; 
   width: 100%;
   height: 3px; 
   background-color: #d6d1ce; 
   border-radius: 2px; 
 }
 
+
 .ABOUT {
   background-color: #131313;
   min-height: 90vh;
   width: 100%;
-  margin: auto; 
-  padding: 290px 20px;
+  padding: clamp(60px, 12vh, 140px) 6%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(30px, 5vw, 80px);
+  text-align: left;
+}
+
+.ABOUT-text {
+  flex: 1 1 420px;
+  max-width: 640px;
   text-align: center;
-  position: relative;   
 }
 
 .ABOUT h1 {
   font-family: "Fraunces";
   color: #d6d1ce;
-  font-size: 5rem;        
+  font-size: clamp(2.2rem, 5vw, 5rem);        
   line-height: 1.2;
-  margin-bottom: 40px;  
-  margin-right: 890px;  
+  margin-bottom: 40px;
 }
 
 .ABOUT p {
   font-family: "Fraunces";
   color: #d6d1ce;
-  font-size: 25px;   
+  font-size: clamp(16px, 1.6vw, 25px);
   line-height: 1.6;
   margin-top: 0;
   margin-bottom: 30px;
-  margin-right: 890px;    
 }
 
 .second-paragraph {
   max-width: 600px;       
-  margin-left: 410px;   
-  margin-right: auto;
+  margin: 0 auto;
   text-align: center;
 }
 
-.henjie {
-  width: 680px;
+.henjie{
+  width: 100%;
+  max-width: 500px;
   height: auto;
-  position: absolute;
-  top: 100px;
-  right: 200px;
+  flex: 1 1 320px;
+  display: block;
 }
+
 
 .PORTFOLIO {
   background-color: #131313;
@@ -173,14 +198,16 @@ nav.scrolled .logo {
   align-items: center;
   gap: 60px;
   padding: 80px 20px;
+  overflow: hidden;
 }
 
 .PORTFOLIO h1 {
   color: #d6d1ce;
   font-family: "Fraunces";
   white-space: nowrap;
-  font-size: 70px;
+  font-size: clamp(34px, 6vw, 70px);
   margin: 0;
+  text-align: center;
 }
 
 .photo-row {
@@ -217,11 +244,13 @@ nav.scrolled .logo {
 
 .SOFT-MOMENTS {
   width: 650px;
+  max-width: 90vw;
 }
 
 .PORTRAITS,
 .LIVE-EVENTS {
   width: 500px;
+  max-width: 90vw;
   height: 700px;
   object-fit: cover;
   object-position: right bottom;
@@ -230,6 +259,7 @@ nav.scrolled .logo {
 .SPORTS,
 .TRAVEL {
   width: 500px;
+  max-width: 90vw;
   height: 700px;
   object-fit: cover;
   object-position: right bottom;
@@ -241,7 +271,6 @@ nav.scrolled .logo {
 .photo-block:nth-child(5) {
   align-self: center;
 }
-
 
 .left,
 .middle,
@@ -264,15 +293,14 @@ nav.scrolled .logo {
   margin-top: 85px;
 }
 
-
 .button {
     font-family: "Fraunces";
     color: #d6d1ce;
     display: inline-block;
     text-decoration: none;
     border: 1px solid;
-    padding: 30px 40px;
-    font-size: 25px;
+    padding: clamp(18px, 3vw, 30px) clamp(24px, 4vw, 40px);
+    font-size: clamp(16px, 2vw, 25px);
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
@@ -285,116 +313,11 @@ nav.scrolled .logo {
   transition: 1s;
 }
 
-.services {
-    min-height: 80vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/_MG_9658.JPG);
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    position: relative;
-}
 
-.service-line {
-    width: 90%;
-    color: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    font-family: "Fraunces";
-    font-size: 20px;
-}
-
-.button2 {
-    font-family: "Fraunces";
-    color: #ffffff;
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid;
-    padding: 30px 40px;
-    font-size: 25px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.button2:hover{
-    border: 1px solid  #d6d1ce;
-    color: black;
-    background: white;
-    transition: 1s;
-}
-
-.contacts {
-    min-height: 15vh;
-    width: 100%;
-    background-color: #131313;
-    padding: 20px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contacts-left {
-    display: flex;
-    flex-direction: column;
-}
-
-.bottom-logo {
-    width: 370px;
-    height: auto;
-    display: block;
-}
-
-.copyright {
-    color: #d6d1ce;
-    font-family: "Fraunces";
-    transform: translateY(-150px);
-    margin-left: 15px; 
-}
-
-.contact-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-    color: #d6d1ce;
-    font-family: "Fraunces";
-}
-
-.contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.instagram,
-.gmail,
-.phone_number,
-.insta,
-.email,
-.number {
-    margin: 0;
-    font-size: 20px;
-}
-
-.divider {
-    width: 1px;
-    height: 50px;
-    background-color: #d6d1ce;
-    align-self: center;
-}
-    
 .depth-carousel {
   position: relative;
   width: 100%;
-  height: 950px;
+  height: clamp(420px, 70vh, 950px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,8 +343,8 @@ nav.scrolled .logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
-  height: 700px;
+  width: clamp(220px, 35vw, 500px);
+  height: clamp(300px, 50vw, 700px);
   overflow: hidden;
   will-change: transform, opacity, filter;
   cursor: pointer;
@@ -447,10 +370,124 @@ nav.scrolled .logo {
   white-space: nowrap;
   text-align: center;
   margin-top: -50px;
+  font-size: clamp(16px, 2vw, 24px);
 }
 
-html {
-    scroll-behavior: smooth;
+
+.services {
+    min-height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/_MG_9658.JPG);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.service-line {
+    width: 90%;
+    color: #ffffff;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.service-line h1 {
+  font-size: clamp(24px, 4vw, 40px);
+  line-height: 1.3;
+}
+
+.button2 {
+    font-family: "Fraunces";
+    color: #ffffff;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    padding: clamp(18px, 3vw, 30px) clamp(24px, 4vw, 40px);
+    font-size: clamp(16px, 2vw, 25px);
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.button2:hover{
+    border: 1px solid  #d6d1ce;
+    color: black;
+    background: white;
+    transition: 1s;
+}
+
+
+.contacts {
+    min-height: 15vh;
+    width: 100%;
+    background-color: #131313;
+    padding: 30px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.contacts-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-logo {
+    width: clamp(180px, 22vw, 370px);
+    height: auto;
+    display: block;
+}
+
+.copyright {
+    color: #d6d1ce;
+    font-family: "Fraunces";
+    margin-top: 12px;
+    font-size: clamp(12px, 1.2vw, 16px);
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 40px;
+    color: #d6d1ce;
+    font-family: "Fraunces";
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.instagram,
+.gmail,
+.phone_number,
+.insta,
+.email,
+.number {
+    margin: 0;
+    font-size: clamp(14px, 1.2vw, 20px);
+}
+
+.divider {
+    width: 1px;
+    height: 50px;
+    background-color: #d6d1ce;
+    align-self: center;
 }
 
 .ABOUT, .PORTFOLIO, .services, .contacts {
@@ -463,4 +500,33 @@ img {
   user-select: none;
   -webkit-touch-callout: none;
   pointer-events: none;
+}
+
+
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .nav-links ul {
+    gap: 4px 10px;
+  }
+
+  .ABOUT {
+    text-align: center;
+  }
+
+  .contacts {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contacts-left {
+    align-items: center;
+  }
+
+  .contact-links {
+    justify-content: center;
+  }
 }
