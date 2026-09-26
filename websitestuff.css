@@ -456,3 +456,11 @@ html {
 .ABOUT, .PORTFOLIO, .services, .contacts {
     scroll-margin-top: 100px; 
 }
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
