@@ -1,0 +1,458 @@
+* {  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}     
+
+.header {
+    min-height: 100vh;
+    width: 100%; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/_MG_9701.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header {
+    padding-top: 60px; 
+}
+
+nav {
+   display: flex; 
+   padding: 12px 6%;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
+   background-color: transparent;
+   transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+nav.scrolled {
+   background-color: #131313;
+   padding: 6px 6%; 
+}
+
+nav .logo{
+    width: 305px; 
+    height: auto;
+    display: block;
+    transition: width 0.3s ease;
+}
+
+nav.scrolled .logo {
+    width: 180px; 
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #d6d1ce;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Fraunces" 
+}
+
+.nav-links ul li a::after{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background: #d6d1ce;
+    display: block;
+    margin: auto;
+    transition: 0.3s ease;
+}
+
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+
+.opening-line{
+    width: 90%;
+    color: #d6d1ce;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: "Fraunces";
+}
+
+.opening-line h2{
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.opening-line h1{
+    font-size: 120px;
+    font-weight: 400;
+}
+
+.custom-underline {
+  position: relative;
+  display: inline-block; 
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%; 
+  margin-top: -13px; 
+  width: 100%;
+  height: 3px; 
+  background-color: #d6d1ce; 
+  border-radius: 2px; 
+}
+
+.ABOUT {
+  background-color: #131313;
+  min-height: 90vh;
+  width: 100%;
+  margin: auto; 
+  padding: 290px 20px;
+  text-align: center;
+}
+
+.ABOUT h1 {
+  font-family: "Fraunces";
+  color: #d6d1ce;
+  font-size: 5rem;        
+  line-height: 1.2;
+  margin-bottom: 40px;  
+  margin-right: 890px;  
+}
+
+.ABOUT p {
+  font-family: "Fraunces";
+  color: #d6d1ce;
+  font-size: 25;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-right: 890px;    
+}
+
+.second-paragraph {
+  max-width: 600px;       
+  margin-left: 410;      
+  margin-right: auto;
+  text-align: center;
+}
+
+.henjie{
+  width: 680px;
+  height: auto;
+  position: absolute;
+  bottom: -997px;
+  right: 200px;
+}
+
+.PORTFOLIO {
+  background-color: #131313;
+  min-height: 130vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 20px;
+}
+
+.PORTFOLIO h1 {
+  color: #d6d1ce;
+  font-family: "Fraunces";
+  white-space: nowrap;
+  font-size: 70px;
+  margin: 0;
+  margin-left: -1590px;
+}
+
+.photo-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 60px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  user-select: none;
+  width: 100%;
+  min-width: 0;
+}
+
+.photo-row::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-row.dragging {
+  cursor: grabbing;
+}
+
+.photo-block {
+  flex-shrink: 0;
+}
+
+.PORTRAITS,
+.SOFT-MOMENTS,
+.LIVE-EVENTS {
+  height: auto;
+  display: block;
+}
+
+.SOFT-MOMENTS {
+  width: 650px;
+}
+
+.PORTRAITS,
+.LIVE-EVENTS {
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
+  object-position: right bottom;
+}
+
+.SPORTS,
+.TRAVEL {
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
+  object-position: right bottom;
+}
+
+.photo-block:nth-child(1),
+.photo-block:nth-child(3),
+.photo-block:nth-child(4),
+.photo-block:nth-child(5) {
+  align-self: center;
+}
+
+
+.left,
+.middle,
+.right,
+.sports,
+.building {
+  font-family: "Fraunces";
+  color: #d6d1ce;
+  white-space: nowrap;
+  margin-top: 15px;
+}
+
+.left{
+  transform: translateY(-70px);
+  margin-top: 85px;
+}
+
+.right{
+  transform: translateY(-70px); 
+  margin-top: 85px;
+}
+
+
+.button {
+    font-family: "Fraunces";
+    color: #d6d1ce;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 30px 40px;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button:hover{
+  border: 1px solid #d6d1ce;
+  color: black;
+  background: white;
+  transition: 1s;
+}
+
+.services {
+    min-height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/_MG_9658.JPG);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.service-line {
+    width: 90%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: "Fraunces";
+    font-size: 20px;
+}
+
+.button2 {
+    font-family: "Fraunces";
+    color: #ffffff;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 30px 40px;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button2:hover{
+    border: 1px solid  #d6d1ce;
+    color: black;
+    background: white;
+    transition: 1s;
+}
+
+.contacts {
+    min-height: 15vh;
+    width: 100%;
+    background-color: #131313;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-logo {
+    width: 370px;
+    height: auto;
+    display: block;
+}
+
+.copyright {
+    color: #d6d1ce;
+    font-family: "Fraunces";
+    transform: translateY(-150px);
+    margin-left: 15px; 
+}
+
+.contact-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    color: #d6d1ce;
+    font-family: "Fraunces";
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.instagram,
+.gmail,
+.phone_number,
+.insta,
+.email,
+.number {
+    margin: 0;
+    font-size: 20px;
+}
+
+.divider {
+    width: 1px;
+    height: 50px;
+    background-color: #d6d1ce;
+    align-self: center;
+}
+    
+.depth-carousel {
+  position: relative;
+  width: 100%;
+  height: 950px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1600px;
+  touch-action: pan-y;
+  outline: none;
+  user-select: none;
+  cursor: grab;
+  overflow: hidden; 
+}
+
+.depth-carousel:active {
+  cursor: grabbing;
+}
+
+.depth-carousel__stage {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.depth-carousel__card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 700px;
+  overflow: hidden;
+  will-change: transform, opacity, filter;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.depth-carousel__card img,
+.depth-carousel__card a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.depth-carousel__card img {
+  object-fit: cover;
+  object-position: right bottom;
+  pointer-events: none;
+}
+
+.depth-carousel__caption {
+  font-family: "Fraunces";
+  color: #d6d1ce;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: -50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.ABOUT, .PORTFOLIO, .services, .contacts {
+    scroll-margin-top: 100px; 
+}
