@@ -43,14 +43,11 @@
 
         <section class="ABOUT" id="ABOUT">
 
-            <div class="ABOUT-text">
-                <h1>Hello, my name is <br>Henjie Adrian P. Jimenez</h1>
-                <p> I'm your friendly neighborhood student photographer based in Cagayan de Oro City.<br>I primarily focus on events and sports photography, while<br>remaining versatile across other areas of photography.</p>
-                <p class="second-paragraph">I mainly work on capturing perfect moments and making them as memorable as possible.</p>
-            </div>
-
             <a href="index.html"> <img src="images/selfie.JPG" class="henjie"></a>
-
+            
+            <h1>Hello, my name is <br>Henjie Adrian P. Jimenez</h1>
+            <p> I'm your friendly neighborhood student photographer based in Cagayan de Oro City.<br>I primarily focus on events and sports photography, while<br>remaining versatile across other areas of photography.</p>
+            <p class="second-paragraph">I mainly work on capturing perfect moments and making them as memorable as possible.</p>        
         </section>
 
 <section class="PORTFOLIO" id="PORTFOLIO">
@@ -112,9 +109,9 @@
         </div>
     </div>
 </section>
-
+        
 <script src="otherwebsitestuff.js"></script>
-
+    
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('depthCarousel');
@@ -122,13 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const captionEl = document.getElementById('carouselCaption');
   const n = cards.length;
 
-  const spread = 620;      
-  const depth = 260;      
+  const spread = 496;      
+  const depth = 208;      
   const tilt = 28;        
   const centerScale = 1.3;  
   const sideScale = 0.72;  
   const falloff = 0.35;     
-  const blurMax = 5;
+  const blurMax = 4;
   const visibleCards = 2;
 
   let pos = 0;
@@ -159,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.style.transform = `translate(-50%, -50%) translateX(${tx}px) translateZ(${tz}px) rotateY(${ry}deg) scale(${scale})`;
       card.style.opacity = opacity;
+      // card.style.filter = `brightness(${brightness}) blur(${blurPx}px)`;   // TEMPORARILY DISABLED FOR TESTING
       card.style.zIndex = zi;
       card.style.pointerEvents = shown ? 'auto' : 'none';
     });
@@ -209,5 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
   goTo(1, false); 
 });
 </script>
+         
     </body>
 </html>
