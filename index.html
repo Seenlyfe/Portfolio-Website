@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta name="viewport" content="with="with=deivce-width, initial-scale="1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>shotbyhenjie</title>
         <link rel="stylesheet" href="websitestuff.css">  
     </head>
@@ -22,7 +22,7 @@
     <body>
         <section class="header" id="top"> <!-- HOME -->
             <nav>
-                <a href="base_design.html"><img src="images/864e8f97-e698-4173-9160-91c41ea4d672_removalai_preview.png" class="logo"></a>
+                <a href="index.html"><img src="images/864e8f97-e698-4173-9160-91c41ea4d672_removalai_preview.png" class="logo"></a>
                 <div class="nav-links"> 
                     <ul>
                         <li><a href="#top">HOME</a></li>
@@ -43,11 +43,14 @@
 
         <section class="ABOUT" id="ABOUT">
 
-            <a href="base_design.html"> <img src="images/selfie.JPG" class="henjie"></a>
-            
-            <h1>Hello, my name is <br>Henjie Adrian P. Jimenez</h1>
-            <p> I'm your friendly neighborhood student photographer based in Cagayan de Oro City.<br>I primarily focus on events and sports photography, while<br>remaining versatile across other areas of photography.</p>
-            <p class="second-paragraph">I mainly work on capturing perfect moments and making them as memorable as possible.</p>        
+            <div class="ABOUT-text">
+                <h1>Hello, my name is <br>Henjie Adrian P. Jimenez</h1>
+                <p> I'm your friendly neighborhood student photographer based in Cagayan de Oro City.<br>I primarily focus on events and sports photography, while<br>remaining versatile across other areas of photography.</p>
+                <p class="second-paragraph">I mainly work on capturing perfect moments and making them as memorable as possible.</p>
+            </div>
+
+            <a href="index.html"> <img src="images/selfie.JPG" class="henjie"></a>
+
         </section>
 
 <section class="PORTFOLIO" id="PORTFOLIO">
@@ -56,16 +59,16 @@
     <div class="depth-carousel" id="depthCarousel" tabindex="0">
         <div class="depth-carousel__stage" id="carouselStage">
             <div class="depth-carousel__card" data-caption="PORTRAITS">
-                <a href="base_design.html"><img src="images/get a room-3-2.jpg" alt="Portraits"></a>
+                <a href="index.html"><img src="images/get a room-3-2.jpg" alt="Portraits"></a>
             </div>
             <div class="depth-carousel__card" data-caption="LIVE EVENTS">
-                <a href="base_design.html"><img src="images/_MG_0529.jpg" alt="Live Events"></a>
+                <a href="index.html"><img src="images/_MG_0529.jpg" alt="Live Events"></a>
             </div>
             <div class="depth-carousel__card" data-caption="SPORTS">
-                <a href="base_design.html"><img src="images/DSC_1267-2.jpg" alt="Sports"></a>
+                <a href="index.html"><img src="images/DSC_1267-2.jpg" alt="Sports"></a>
             </div>
             <div class="depth-carousel__card" data-caption="TRAVEL">
-                <a href="base_design.html"><img src="images/DSC_0031 - Copy-2.jpg" alt="Travel"></a>
+                <a href="index.html"><img src="images/DSC_0031 - Copy-2.jpg" alt="Travel"></a>
             </div>
         </div>
     </div>
@@ -84,7 +87,7 @@
 
 <section class="contacts" id="CONTACT">
     <div class="contacts-left">
-        <a href="base_design.html"><img src="images/864e8f97-e698-4173-9160-91c41ea4d672_removalai_preview.png" class="bottom-logo"></a>
+        <a href="index.html"><img src="images/864e8f97-e698-4173-9160-91c41ea4d672_removalai_preview.png" class="bottom-logo"></a>
         <p class="copyright">&copy; 2026 SHOTBYHENJIE. All rights reserved.</p>
     </div>
 
@@ -109,9 +112,9 @@
         </div>
     </div>
 </section>
-        
+
 <script src="otherwebsitestuff.js"></script>
-    
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('depthCarousel');
@@ -156,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.style.transform = `translate(-50%, -50%) translateX(${tx}px) translateZ(${tz}px) rotateY(${ry}deg) scale(${scale})`;
       card.style.opacity = opacity;
-      // card.style.filter = `brightness(${brightness}) blur(${blurPx}px)`;   // TEMPORARILY DISABLED FOR TESTING
       card.style.zIndex = zi;
       card.style.pointerEvents = shown ? 'auto' : 'none';
     });
@@ -207,13 +209,5 @@ document.addEventListener('DOMContentLoaded', () => {
   goTo(1, false); 
 });
 </script>
-         
     </body>
-</html>  
-
-
-
-
-
-
-
+</html>
