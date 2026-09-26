@@ -150,16 +150,16 @@ nav.scrolled .logo {
 
 .second-paragraph {
   max-width: 600px;       
-  margin-left: 410;      
+  margin-left: 410px;   
   margin-right: auto;
   text-align: center;
 }
 
-.henjie{
+.henjie {
   width: 680px;
   height: auto;
   position: absolute;
-  bottom: -997px;
+  top: 290px;
   right: 200px;
 }
 
@@ -180,7 +180,6 @@ nav.scrolled .logo {
   white-space: nowrap;
   font-size: 70px;
   margin: 0;
-  margin-left: -1590px;
 }
 
 .photo-row {
