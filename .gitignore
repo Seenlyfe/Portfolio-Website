@@ -1,0 +1,17 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor/IDE junk
+.vscode/
+.idea/
+*.swp
+
+# Env/config files (if you ever add any backend/config later)
+.env
+.env.*
+config.js
+secrets.js
+
+# Logs
+*.log
