@@ -18,12 +18,29 @@
             nav.classList.remove('scrolled');
         }
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        // close the dropdown after tapping a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+    });
 </script>
     <body>
         <section class="header" id="top"> <!-- HOME -->
             <nav>
                 <a href="index.html"><img src="images/864e8f97-e698-4173-9160-91c41ea4d672_removalai_preview.png" class="logo"></a>
-                <div class="nav-links"> 
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+                <div class="nav-links" id="navLinks"> 
                     <ul>
                         <li><a href="#top">HOME</a></li>
                         <li><a href="#ABOUT">ABOUT</a></li>
@@ -213,6 +230,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    goTo(Math.round(pos), true);
+  });
+
+  // touch support (phones/tablets)
+  root.addEventListener('touchstart', (e) => {
+    dragging = true;
+    startX = e.touches[0].clientX;
+    startPos = pos;
+    cards.forEach(c => c.style.transition = 'none');
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!dragging) return;
+    const dx = e.touches[0].clientX - startX;
+    pos = startPos - dx / spread;
+    layout(pos);
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
     if (!dragging) return;
     dragging = false;
     goTo(Math.round(pos), true);
