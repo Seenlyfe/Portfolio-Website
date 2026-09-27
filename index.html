@@ -10,13 +10,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
     </head>
     <script>
+    let lastScrollY = window.scrollY;
+
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > 50) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
         }
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // scrolling down — hide nav
+            nav.classList.add('nav-hidden');
+        } else {
+            // scrolling up — show nav
+            nav.classList.remove('nav-hidden');
+        }
+
+        lastScrollY = currentScrollY;
     });
 
     document.addEventListener('DOMContentLoaded', () => {
