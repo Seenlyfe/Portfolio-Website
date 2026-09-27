@@ -464,3 +464,166 @@ img {
   -webkit-touch-callout: none;
   pointer-events: none;
 }
+
+/* =====================================================
+   MOBILE ONLY — everything above this line is untouched.
+   These rules only apply on screens 768px wide or less.
+===================================================== */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ---- NAV ---- */
+  nav {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding: 10px 5%;
+  }
+
+  nav .logo,
+  nav.scrolled .logo {
+    width: 140px;
+  }
+
+  .nav-links {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links ul li {
+    padding: 0 8px;
+  }
+
+  .nav-links ul li a {
+    font-size: 14px;
+  }
+
+  /* ---- HERO ---- */
+  .opening-line h1 {
+    font-size: 44px;
+  }
+
+  .opening-line h2 {
+    font-size: 18px;
+  }
+
+  /* ---- ABOUT ---- */
+  .ABOUT {
+    padding: 100px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ABOUT h1 {
+    font-size: 2rem;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .ABOUT p {
+    font-size: 15px;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .second-paragraph {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .henjie {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+    margin: 30px auto 0;
+    order: -1;
+  }
+
+  /* ---- PORTFOLIO ---- */
+  .PORTFOLIO {
+    padding: 50px 10px;
+    gap: 24px;
+  }
+
+  .PORTFOLIO h1 {
+    font-size: 32px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .depth-carousel {
+    height: 420px;
+  }
+
+  .depth-carousel__card {
+    width: 220px;
+    height: 300px;
+  }
+
+  .depth-carousel__caption {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+
+  /* ---- SERVICES ---- */
+  .service-line h1 {
+    font-size: 20px;
+  }
+
+  .service-line {
+    font-size: 13px;
+    width: 85%;
+  }
+
+  .button2 {
+    padding: 16px 24px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  /* ---- CONTACTS ---- */
+  .contacts {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 8%;
+  }
+
+  .contacts-left {
+    align-items: center;
+  }
+
+  .bottom-logo {
+    width: 200px;
+  }
+
+  .copyright {
+    transform: none;
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .contact-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .contact-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .instagram, .gmail, .phone_number, .insta, .email, .number {
+    font-size: 14px;
+  }
+}
