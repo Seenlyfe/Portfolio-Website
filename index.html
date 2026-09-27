@@ -119,14 +119,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const captionEl = document.getElementById('carouselCaption');
   const n = cards.length;
 
-  const spread = 496;      
-  const depth = 208;      
+  let spread, depth;
   const tilt = 28;        
   const centerScale = 1.3;  
   const sideScale = 0.72;  
   const falloff = 0.35;     
-  const blurMax = 4;
+  let blurMax;
   const visibleCards = 2;
+
+  function updateSpacingForScreenSize() {
+    if (window.innerWidth <= 768) {
+      // mobile card size is 220px wide, 300px tall
+      spread = 260;
+      depth = 110;
+      blurMax = 3;
+    } else {
+      // desktop card size is 400px wide, 560px tall
+      spread = 496;
+      depth = 208;
+      blurMax = 4;
+    }
+  }
+
+  updateSpacingForScreenSize();
 
   let pos = 0;
   let dragging = false;
@@ -173,6 +188,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     layout(pos);
   }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updateSpacingForScreenSize();
+      goTo(Math.round(pos), false);
+    }, 150);
+  });
 
   root.addEventListener('mousedown', (e) => {
     dragging = true;
