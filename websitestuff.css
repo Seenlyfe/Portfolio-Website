@@ -28,7 +28,7 @@ nav {
    top: 0;
    left: 0;
    width: 100%;
-   z-index: 1000;
+   z-index: 5000;
    background-color: transparent;
    transition: background-color 0.3s ease, padding 0.3s ease;
 }
@@ -544,6 +544,7 @@ img {
 
   /* ---- ABOUT ---- */
   .ABOUT {
+    min-height: auto;
     padding: 100px 20px 60px;
     display: flex;
     flex-direction: column;
@@ -577,6 +578,7 @@ img {
 
   /* ---- PORTFOLIO ---- */
   .PORTFOLIO {
+    min-height: auto;
     padding: 50px 10px;
     gap: 24px;
   }
