@@ -54,6 +54,16 @@ nav.scrolled .logo {
     text-align: right;
 }
 
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #d6d1ce;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
 .nav-links ul li{
     list-style: none;
     display: inline-block;
@@ -478,9 +488,8 @@ img {
 
   /* ---- NAV ---- */
   nav {
-    flex-wrap: wrap;
-    row-gap: 10px;
     padding: 10px 5%;
+    position: relative;
   }
 
   nav .logo,
@@ -488,17 +497,40 @@ img {
     width: 140px;
   }
 
+  .nav-toggle {
+    display: block;
+  }
+
   .nav-links {
+    flex: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    text-align: center;
+    background-color: #131313;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 400px;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
   }
 
   .nav-links ul li {
-    padding: 0 8px;
+    padding: 10px 0;
+    display: block;
   }
 
   .nav-links ul li a {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   /* ---- HERO ---- */
